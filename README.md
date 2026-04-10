@@ -23,7 +23,8 @@ Diseñada con HTML, CSS y JavaScript, esta app ofrece una experiencia visual atr
 - **Font Awesome**: Íconos dinámicos para representar condiciones climáticas.
 - **Open-Meteo API**: Fuente de datos meteorológicos gratuitos.
 - 
-Estructura del proyecto
+## 📂 Estructura del proyecto
+
 weather-app/ │── index.html │── style.css │── script.js │── README.md
 
  Instalación y uso
@@ -47,4 +48,3 @@ Este proyecto es de uso libre bajo la licencia MIT. Puedes modificarlo y adaptar
 
 
 
-## 📂 Estructura del proyecto
