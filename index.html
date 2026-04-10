@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clima App</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome para íconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div class="app-container">
+    <h1>🌤 Mi App del Clima</h1>
+    <div class="search-box">
+      <input type="text" id="cityInput" placeholder="Ingresa una ciudad...">
+      <button onclick="getWeather()">Buscar</button>
+    </div>
+    <div id="weatherResult" class="weather-card">
+      <!-- Aquí se mostrará el clima actual -->
+    </div>
+    <div id="forecastResult" class="forecast-container">
+      <!-- Aquí se mostrará el pronóstico extendido -->
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

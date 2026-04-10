@@ -1,0 +1,265 @@
+/* Tipografía moderna */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(-45deg, #4facfe, #00f2fe, #43e97b, #38f9d7);
+  background-size: 400% 400%;
+  animation: gradientBG 12s ease infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #222;
+  transition: background 0.5s ease, color 0.5s ease;
+}
+
+@keyframes gradientBG {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+/* Contenedor principal estilo glassmorphism */
+.app-container {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.25);
+  text-align: center;
+  width: 90%;
+  max-width: 650px;
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255,255,255,0.3);
+  transition: background 0.5s ease, color 0.5s ease;
+}
+
+.app-container h1 {
+  margin-bottom: 25px;
+  font-size: 2.2em;
+  font-weight: 600;
+  color: #fff;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+/* Caja de búsqueda */
+.search-box {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1em;
+  outline: none;
+  background: rgba(255,255,255,0.8);
+  box-shadow: inset 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.search-box button {
+  padding: 14px 20px;
+  background: linear-gradient(135deg, #4facfe, #00c6ff);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.search-box button:hover {
+  background: linear-gradient(135deg, #00c6ff, #4facfe);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* Tarjeta del clima actual */
+.weather-card {
+  padding: 25px;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.85);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(15px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+.weather-card h2 {
+  margin: 10px 0;
+  font-size: 1.6em;
+  font-weight: 600;
+  color: #333;
+}
+
+.weather-card p {
+  margin: 8px 0;
+  font-size: 1.1em;
+  color: #444;
+}
+
+/* Íconos animados */
+.weather-icon {
+  font-size: 4em;
+  margin: 20px 0;
+  color: #4facfe;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {transform: scale(1);}
+  50% {transform: scale(1.15);}
+  100% {transform: scale(1);}
+}
+
+.sun { animation: spin 10s linear infinite; }
+@keyframes spin {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+}
+
+.rain { animation: rainDrop 1s infinite; }
+@keyframes rainDrop {
+  0% {transform: translateY(0);}
+  50% {transform: translateY(6px);}
+  100% {transform: translateY(0);}
+}
+
+.bolt { animation: flash 1s infinite; }
+@keyframes flash {
+  0%, 100% {opacity: 1;}
+  50% {opacity: 0.2;}
+}
+
+/* Pronóstico extendido */
+.forecast-container {
+  margin-top: 25px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 18px;
+}
+
+.forecast-day {
+  background: rgba(255,255,255,0.9);
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.forecast-day:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.forecast-day h3 {
+  margin: 5px 0;
+  font-size: 1.1em;
+  font-weight: 600;
+  color: #333;
+}
+
+.forecast-day p {
+  margin: 4px 0;
+  font-size: 0.95em;
+  color: #555;
+}
+
+/* --- MODO OSCURO --- */
+body.dark-mode {
+  background: linear-gradient(-45deg, #141e30, #243b55, #0f2027, #2c5364);
+  color: #eee;
+}
+
+.app-container.dark-mode {
+  background: rgba(0,0,0,0.4);
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.app-container.dark-mode h1 {
+  color: #f5f5f5;
+}
+
+.weather-card.dark-mode {
+  background: rgba(20,20,20,0.85);
+}
+
+.weather-card.dark-mode h2 {
+  color: #f5f5f5;
+}
+
+.weather-card.dark-mode p {
+  color: #ddd;
+}
+
+.forecast-day.dark-mode {
+  background: rgba(30,30,30,0.9);
+}
+
+.forecast-day.dark-mode h3 {
+  color: #f5f5f5;
+}
+
+.forecast-day.dark-mode p {
+  color: #ccc;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .app-container {
+    padding: 20px;
+    max-width: 95%;
+  }
+
+  .search-box {
+    flex-direction: column;
+  }
+
+  .search-box input, .search-box button {
+    width: 100%;
+  }
+
+  .weather-icon {
+    font-size: 3em;
+  }
+
+  .forecast-container {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .app-container h1 {
+    font-size: 1.6em;
+  }
+
+  .weather-card h2 {
+    font-size: 1.3em;
+  }
+
+  .weather-card p {
+    font-size: 1em;
+  }
+
+  .weather-icon {
+    font-size: 2.5em;
+  }
+
+  .forecast-day h3 {
+    font-size: 0.95em;
+  }
+
+  .forecast-day p {
+    font-size: 0.85em;
+  }
+}
