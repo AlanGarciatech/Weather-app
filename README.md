@@ -31,8 +31,10 @@ weather-app/ │── index.html │── style.css │── script.js │─
 
 1. Clona este repositorio:
    ```bash
-   git clone https://github.com/tuusuario/weather-app.git
-   - Abre la carpeta del proyecto en Visual Studio Code.
+git clone https://github.com/JorgeFYA/weather-app.git
+cd weather-app-js
+
+- Abre la carpeta del proyecto en Visual Studio Code.
 - Ejecuta el archivo index.html en tu navegador.
 - Recomendado: usar la extensión Live Server para recargar automáticamente.
 - Ingresa el nombre de una ciudad en el buscador y disfruta de la información meteorológica.
