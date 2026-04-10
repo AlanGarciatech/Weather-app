@@ -31,7 +31,7 @@ weather-app/ │── index.html │── style.css │── script.js │─
 
 1. Clona este repositorio:
    ```bash
-git@github.com:AlanGarciatech/Weather-app.git
+git clone https://git@github.com:AlanGarciatech/Weather-app.git
 cd weather-app-js
 
 - Abre la carpeta del proyecto en Visual Studio Code.
